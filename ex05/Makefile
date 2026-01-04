@@ -1,22 +1,22 @@
-NAME = harl
+NAME		= harl
+CXX			= c++
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+RM			= rm -f
 
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+SRCS		= main.cpp Harl.cpp
+OBJS		= $(SRCS:.cpp=.o)
 
-SRC = main.cpp Harl.cpp
-OBJ = $(SRC:.cpp=.o)
+all:		$(NAME)
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+$(NAME):	$(OBJS)
+			$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-	rm -f $(OBJ)
+			$(RM) $(OBJS)
 
-fclean: clean
-	rm -f $(NAME)
+fclean:		clean
+			$(RM) $(NAME)
 
-re: fclean all
+re:			fclean all
 
-.PHONY: all clean fclean re
+.PHONY:		all clean fclean re

@@ -2,8 +2,8 @@
 #define HUMANB_HPP
 
 #include "Weapon.hpp"
-#include <iostream>
 #include <string>
+#include <iostream>
 
 class HumanB
 {
@@ -16,7 +16,7 @@ public:
     ~HumanB();
 
     void setWeapon(Weapon& weapon);
-    void attack();
+    void attack(void) const;
 };
 
 #endif

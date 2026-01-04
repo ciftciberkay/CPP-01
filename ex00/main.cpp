@@ -2,12 +2,15 @@
 
 int main()
 {
-    std::cout << "----- Stack Test (randomChump) -----" << std::endl;
-    randomChump("StackZombie");
+    std::cout << "----- Stack Allocation Test -----" << std::endl;
+    randomChump("Foo");
     std::cout << std::endl;
-    std::cout << "----- Heap Test (newZombie) -----" << std::endl;
-    Zombie* heapZombie = newZombie("HeapZombie");
-    heapZombie->announce();
-    delete heapZombie;
+    std::cout << "----- Heap Allocation Test -----" << std::endl;
+    Zombie* heapZombie = newZombie("Bar");
+    if (heapZombie)
+    {
+        heapZombie->announce();
+        delete heapZombie; 
+    }
     return 0;
 }

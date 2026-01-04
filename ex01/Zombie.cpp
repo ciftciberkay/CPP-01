@@ -5,7 +5,7 @@ Zombie::Zombie() {
 
 Zombie::~Zombie()
 {
-    std::cout << this->_name << ": destroyed" << std::endl;
+    std::cout << this->_name << " is destroyed." << std::endl;
 }
 
 void Zombie::announce(void)
