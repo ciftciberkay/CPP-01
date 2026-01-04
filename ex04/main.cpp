@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <cstdlib>
 
 void replaceContent(std::string& content, const std::string& s1, const std::string& s2, std::ofstream& ofs)
 {
