@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 
-void replaceContent(std::string& content, const std::string& s1, const std::string& s2, std::ofstream& ofs)
+void replaceContent(const std::string& content, const std::string& s1, const std::string& s2, std::ofstream& ofs)
 {
     size_t pos = 0;
     size_t foundPos;
